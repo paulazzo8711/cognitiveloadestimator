@@ -10,7 +10,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:cognitiveloadestimator.uploadFile"
+    "*"
   ],
   "main": "./out/extension.js",
   "contributes": {
