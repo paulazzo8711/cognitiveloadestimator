@@ -3,7 +3,8 @@
   "displayName": "CognitiveLoadEstimator",
   "publisher": "paulazzopardi",
   "description": "Utilize eye tracker data to determine cognitive load and give the user suggestions to reduce cognitive load.",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "icon": "/images/GCL_Icon.png",
   "engines": {
     "vscode": "^1.86.0"
   },
