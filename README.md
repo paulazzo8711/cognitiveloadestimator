@@ -41,7 +41,7 @@ Click on the status bar item to manually refresh the cognitive load estimation.
 
 ## Contributing
 
-We welcome contributions and suggestions! Please submit issues and pull requests on our [GitHub repository](#).
+We welcome contributions and suggestions! Please submit issues and pull requests on our [GitHub repository](https://github.com/paulazzo8711/cognitiveloadestimator).
 
 ## License
 
