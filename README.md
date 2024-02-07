@@ -1,6 +1,6 @@
 # Cognitive Load Estimator for VS Code
 
-The **Cognitive Load Estimator** extension for Visual Studio Code offers a unique approach to productivity by leveraging eye gaze data from the Gazepoint GPT-3 eye tracker. This extension analyzes your cognitive load in real-time and provides live updates, enabling you to take action to reduce cognitive strain and, in turn, enhance your focus and productivity.
+The **Cognitive Load Estimator** extension for Visual Studio Code offers a unique approach to productivity by leveraging eye gaze data from the Gazepoint GP3 eye tracker. This extension analyzes your cognitive load in real-time and provides live updates, enabling you to take action to reduce cognitive strain and, in turn, enhance your focus and productivity.
 
 ## Features
 
@@ -13,13 +13,13 @@ The **Cognitive Load Estimator** extension for Visual Studio Code offers a uniqu
 
 ### Prerequisites
 
-- A Gazepoint GPT-3 eye tracker device.
+- A Gazepoint GP3 eye tracker device.
 - Eye gaze data recorded in Excel format (.xlsx or .xls).
 
 ### Installation
 
 1. Install the extension directly from the Visual Studio Code Marketplace.
-2. Connect your Gazepoint GPT-3 eye tracker and ensure it is recording eye gaze data to the specified directory.
+2. Connect your Gazepoint GP3 eye tracker and ensure it is recording eye gaze data to the specified directory.
 
 ### Configuration
 
@@ -49,7 +49,7 @@ This extension is distributed under the MIT License. See `LICENSE` for more info
 
 ## Acknowledgments
 
-- Gazepoint for the GPT-3 eye tracker.
+- Gazepoint for the GP3 eye tracker.
 - All contributors who have helped to improve this extension.
 
 ---
