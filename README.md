@@ -1,71 +1,57 @@
-# cognitiveloadestimator README
+# Cognitive Load Estimator for VS Code
 
-This is the README for your extension "cognitiveloadestimator". After writing up a brief description, we recommend including the following sections.
+The **Cognitive Load Estimator** extension for Visual Studio Code offers a unique approach to productivity by leveraging eye gaze data from the Gazepoint GPT-3 eye tracker. This extension analyzes your cognitive load in real-time and provides live updates, enabling you to take action to reduce cognitive strain and, in turn, enhance your focus and productivity.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **Real-Time Cognitive Load Estimation**: Continuously monitors eye gaze data to estimate your current cognitive load.
+- **Live Updates**: Presents live updates of your cognitive load directly in the VS Code status bar, giving you instant feedback.
+- **Productivity Insights**: Offers suggestions and insights based on your cognitive load to help you manage and reduce cognitive strain.
+- **Customizable Data Source**: Allows you to specify the directory path for reading eye gaze data, making it flexible for different working environments.
 
-For example if there is an image subfolder under your extension project workspace:
+## Getting Started
 
-\!\[feature X\]\(images/feature-x.png\)
+### Prerequisites
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- A Gazepoint GPT-3 eye tracker device.
+- Eye gaze data recorded in Excel format (.xlsx or .xls).
 
-## Requirements
+### Installation
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+1. Install the extension directly from the Visual Studio Code Marketplace.
+2. Connect your Gazepoint GPT-3 eye tracker and ensure it is recording eye gaze data to the specified directory.
 
-## Extension Settings
+### Configuration
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+Customize the extension by specifying the directory path where your eye gaze data is stored:
 
-For example:
+1. Open **User Settings** (`Ctrl` + `,`).
+2. Search for `CognitiveLoadEstimator`.
+3. Set the `Directory Path` to where your eye gaze data is saved.
 
-This extension contributes the following settings:
+## Usage
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+Upon activation, the extension begins estimating your cognitive load based on the most recent eye gaze data file in the specified directory. The status bar will display your current cognitive load with an icon indicating the trend:
 
-## Known Issues
+- `$(dash)` - Stable
+- `$(arrow-up)` - Increasing
+- `$(arrow-down)` - Decreasing
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Click on the status bar item to manually refresh the cognitive load estimation.
 
-## Release Notes
+## Contributing
 
-Users appreciate release notes as you update your extension.
+We welcome contributions and suggestions! Please submit issues and pull requests on our [GitHub repository](#).
 
-### 1.0.0
+## License
 
-Initial release of ...
+This extension is distributed under the MIT License. See `LICENSE` for more information.
 
-### 1.0.1
+## Acknowledgments
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- Gazepoint for the GPT-3 eye tracker.
+- All contributors who have helped to improve this extension.
 
 ---
 
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Enjoy using Cognitive Load Estimator and take the first step towards a more productive coding session!

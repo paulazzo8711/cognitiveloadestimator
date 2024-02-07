@@ -7,7 +7,9 @@ const path = require("path");
 let statusBarBtn: vscode.StatusBarItem;
 let lastCognitiveLoad: number | null = null;
 let isEstimating = false;
-
+const directoryPath = vscode.workspace
+  .getConfiguration("cognitiveloadestimator")
+  .get("directoryPath");
 export function activate(context: vscode.ExtensionContext) {
   console.log('Your extension "cognitiveloadestimator" is now active!');
 
@@ -42,9 +44,9 @@ export function activate(context: vscode.ExtensionContext) {
 }
 async function uploadFileAndShowResult() {
   try {
-    const directoryPath = "D://Desktop//UNI//Thesis//Thesis models";
+    // const directoryPath = "D://Desktop//UNI//Thesis//Thesis models";
 
-    const files = fs.readdirSync(directoryPath);
+    const files = fs.readdirSync(directoryPath as string);
 
     const excelFiles = files.filter(
       (file) => file.endsWith(".xlsx") || file.endsWith(".xls")

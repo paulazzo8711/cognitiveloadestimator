@@ -14,6 +14,16 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "configuration": {
+      "title": "Cognitive Load Estimator",
+      "properties": {
+        "cognitiveloadestimator.directoryPath": {
+          "type": "string",
+          "default": "",
+          "description": "Path to the directory containing Excel files for cognitive load estimation."
+        }
+      }
+    },
     "commands": [
       {
         "command": "cognitiveloadestimator.uploadFile",
