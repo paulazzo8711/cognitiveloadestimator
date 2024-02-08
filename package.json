@@ -3,7 +3,7 @@
   "displayName": "CognitiveLoadEstimator",
   "publisher": "paulazzopardi",
   "description": "Utilize eye tracker data to determine cognitive load and give the user suggestions to reduce cognitive load.",
-  "version": "2.1.2",
+  "version": "3.0.0",
   "icon": "images/CognitiveLoadEstimator_Icon.jpg",
   "engines": {
     "vscode": "^1.86.0"
@@ -23,10 +23,26 @@
     "configuration": {
       "title": "Cognitive Load Estimator",
       "properties": {
+        "cognitiveloadestimator.mode": {
+          "type": "string",
+          "enum": [
+            "API",
+            "Excel"
+          ],
+          "default": "API",
+          "description": "Choose the mode of operation: Use API or read from Excel files."
+        },
+        "cognitiveloadestimator.apiUrl": {
+          "type": "string",
+          "default": "http://127.0.0.1:4242",
+          "description": "URL of the API to use when 'API' mode is selected. Ignored if 'Excel' is chosen.",
+          "scope": "resource"
+        },
         "cognitiveloadestimator.directoryPath": {
           "type": "string",
           "default": "",
-          "description": "Path to the directory containing Excel files for cognitive load estimation."
+          "description": "Path to the directory containing Excel files for cognitive load estimation when 'Excel' mode is selected. Ignored if 'API' is chosen.",
+          "scope": "resource"
         }
       }
     },
@@ -58,6 +74,8 @@
   },
   "dependencies": {
     "axios": "^1.6.7",
-    "form-data": "^4.0.0"
+    "exceljs": "^4.4.0",
+    "form-data": "^4.0.0",
+    "xml2js": "^0.6.2"
   }
 }
