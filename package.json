@@ -3,7 +3,7 @@
   "displayName": "CognitiveLoadEstimator",
   "publisher": "paulazzopardi",
   "description": "Utilize eye tracker data to determine cognitive load and give the user suggestions to reduce cognitive load.",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "icon": "images/CognitiveLoadEstimator_Icon.jpg",
   "engines": {
     "vscode": "^1.86.0"
@@ -48,8 +48,16 @@
     },
     "commands": [
       {
-        "command": "cognitiveloadestimator.uploadFile",
-        "title": "Upload File and Predict Cognitive Load"
+        "command": "cognitiveloadestimator.toggleEstimation",
+        "title": "Toggle estimating load"
+      },
+      {
+        "command": "cognitiveloadestimator.customTimeOn",
+        "title": "Start estimating load"
+      },
+      {
+        "command": "cognitiveloadestimator.customTimeOff",
+        "title": "Stop estimating load"
       }
     ]
   },
