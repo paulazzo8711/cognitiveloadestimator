@@ -22,7 +22,7 @@ let directoryPath = vscode.workspace
   .get("directoryPath");
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log('Your extension "cognitiveloadestimator" is now active!');
+  // console.log('Your extension "cognitiveloadestimator" is now active!');
 
   statusBarBtn = vscode.window.createStatusBarItem(
     vscode.StatusBarAlignment.Left
