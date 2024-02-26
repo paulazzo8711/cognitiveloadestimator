@@ -20,6 +20,9 @@ const apiUrl = vscode.workspace
 let directoryPath = vscode.workspace
   .getConfiguration("cognitiveloadestimator")
   .get("directoryPath");
+const threshold = vscode.workspace
+  .getConfiguration("cognitiveloadestimator")
+  .get("threshold", 20);
 
 export function activate(context: vscode.ExtensionContext) {
   // console.log('Your extension "cognitiveloadestimator" is now active!');
@@ -360,7 +363,9 @@ async function uploadJsonAndShowResult(jsonData: any) {
     statusBarBtn.text = statusBarText;
     lastCognitiveLoad = formattedCognitiveLoad;
 
-    vscode.window.showInformationMessage(message);
+    if (currentCognitiveLoad > threshold) {
+      vscode.window.showInformationMessage(message);
+    }
   } catch (error) {
     vscode.window.showErrorMessage(
       "Failed to upload file and get response, Stopping extension."
