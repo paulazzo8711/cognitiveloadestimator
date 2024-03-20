@@ -73,24 +73,18 @@ export function activate(context: vscode.ExtensionContext) {
     "cognitiveloadestimator.customTimeOff",
     async () => {
       console.log("Custom time off");
-      try {
-        if (mode === "API") {
-          if (dataCollection.length > 0) {
-            saveDataToJson(dataCollection);
-            uploadJsonAndShowResult(dataCollection);
+      if (mode === "API" && dataCollection.length > 0) {
+        saveDataToJson(dataCollection);
 
-            return dataCollection; // Make sure to return a meaningful value
-          } else {
-            // Handle the case when mode is API but there's no data
-            return "No data to upload";
-          }
+        const result = uploadJsonAndShowResult(dataCollection);
+        dataCollection = [];
+        return result;
+      } else {
+        if (mode === "API") {
         } else {
           const result = uploadFileAndShowResult2();
-          return result; // Assuming this is either awaited or returns a value synchronously
+          return result;
         }
-      } catch (error) {
-        console.error("Error in customTimeOff command:", error);
-        return "Error occurred"; // Return or handle error
       }
     }
   );
@@ -374,6 +368,7 @@ async function uploadJsonAndShowResult(jsonData: any) {
     if (currentCognitiveLoad > threshold) {
       vscode.window.showInformationMessage(message);
     }
+    return currentCognitiveLoad;
   } catch (error) {
     vscode.window.showErrorMessage(
       "Failed to upload file and get response, Stopping extension."
