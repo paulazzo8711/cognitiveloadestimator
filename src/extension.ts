@@ -78,8 +78,8 @@ export function activate(context: vscode.ExtensionContext) {
           if (dataCollection.length > 0) {
             saveDataToJson(dataCollection);
             uploadJsonAndShowResult(dataCollection);
-            dataCollection = [];
-            return "Data uploaded"; // Make sure to return a meaningful value
+
+            return dataCollection; // Make sure to return a meaningful value
           } else {
             // Handle the case when mode is API but there's no data
             return "No data to upload";
@@ -94,7 +94,6 @@ export function activate(context: vscode.ExtensionContext) {
       }
     }
   );
-  
 
   context.subscriptions.push(toggleEstimationDisposable);
 }
